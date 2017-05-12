@@ -1,0 +1,41 @@
+# do
+snippet do
+	do.({|${1}|
+		${2:// body}
+	});
+# Pbind
+snippet Pb
+	Pbind(\instrument, \\${1:synth_name},
+		\dur, ${2}
+	);
+# postln
+snippet po
+	(${1}).postln;
+# SynthDef
+snippet Sy
+	SynthDef("${1:name}", {|${2:args}|
+		${3:// body}
+		Out.ar(${4:/*bus*/}, ${5:/* output */});
+	});
+# if
+snippet if
+	if {${1:true}} {
+		${2}
+	};
+# ife
+snippet ife
+	if {${1:true}} {
+		${2}
+	} {
+		${3:// else}
+	};
+# Routine
+snippet Rou
+	Routine({
+		${1:}
+	});
+# fork
+snippet fo
+	fork {
+		${1}
+	}
